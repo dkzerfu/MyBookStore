@@ -1,5 +1,6 @@
 # MyBookStore
-
+## Description
+* MybookStore is a demo web based app where customers can search through the website an add book to their wishlist. customers can browse any types of book by the tittle and author. 
 ## MVP Goals
 * Create a home page and see a search form
 * User enters a term and submits a form 
@@ -10,21 +11,17 @@
 * Link the login forms to the login fields
 * On submit button clicked, the user will be created in the database and userId cookie is set to that user's id
 
-### RESTful routing chart
-| Method | URL | Functionality | view |
-|--------|-----|---------------|------|
-| GET  | /books | list all books | show books/index.ejs
-| POST | /books | add a book | redirect to /books/:id
-| GET  | /books/:id | show one book |  show books/detail.ejs
-| PUT  | /books/:id | update one book | redirect to /books/:id
-| DELETE | /books/:id | delete one book | redirect to /books
+
 ## Stretch Goals
+
 * Add a shopping cart 
 * when user add books in the shopping cart, user can have access to purchase with fake card 
 * purchased booked will be saved in to purchase history page
 * only the logged in user can access purchase history page
 * Add rent button
 * Rented booked will be stored in to the history only for short period of time 
+
+
 ## User Stories
 
 * As a user, I want to search any book 
@@ -60,8 +57,22 @@
       * stretch goals
     - Sunday:
       * stretch goals
+
+### RESTful routing chart
+
+| Method | URL | Functionality | view |
+|--------|-----|---------------|------|
+| GET  | /books | list all books | show books/index.ejs
+| POST | /books | add a book | redirect to /books/:id
+| GET  | /books/:id | show one book |  show books/detail.ejs
+| PUT  | /books/:id | update one book | redirect to /books/:id
+| DELETE | /books/:id | delete one book | redirect to /books
+
 ## Wireframes
 
+![wireframe](wireframes/homepag.png)
+![wireframe](wireframes/sign-in-page.png)
+![wireframe](wireframes/sign-up-page.png)
 
 ## ERDs
 
