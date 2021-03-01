@@ -1,14 +1,16 @@
 # MyBookStore
 
-# MVP Goals
+## MVP Goals
 * Create a home page and see a search form
 * User enters a term and submits a form 
 * Setup Database 
 * Create books model and table 
 * create RESTful routing
 * Add functionality to the routes
+* Link the login forms to the login fields
+* On submit button clicked, the user will be created in the database and userId cookie is set to that user's id
 
-## RESTful routing chart
+### RESTful routing chart
 | Method | URL | Functionality | view |
 |--------|-----|---------------|------|
 | GET  | /books | list all books | show books/index.ejs
@@ -17,10 +19,12 @@
 | PUT  | /books/:id | update one book | redirect to /books/:id
 | DELETE | /books/:id | delete one book | redirect to /books
 ## Stretch Goals
-* 
-* 
-* 
-* 
+* Add a shopping cart 
+* when user add books in the shopping cart, user can have access to purchase with fake card 
+* purchased booked will be saved in to purchase history page
+* only the logged in user can access purchase history page
+* Add rent button
+* Rented booked will be stored in to the history only for short period of time 
 ## User Stories
 
 * As a user, I want to search any book 
