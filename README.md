@@ -63,9 +63,8 @@
 | Method | URL | Functionality | view |
 |--------|-----|---------------|------|
 | GET  | /books | list all books | show books/index.ejs
-| POST | /books | add a book | redirect to /books/:id
-| GET  | /books/:id | show one book |  show books/detail.ejs
-| PUT  | /books/:id | update one book | redirect to /books/:id
+| POST | /books | add a book to wishlist | redirect to /books/:id
+| GET  | /books/:id | show one book |  redirect to /wishlist
 | DELETE | /books/:id | delete one book | redirect to /books
 
 ## Wireframes
@@ -73,6 +72,9 @@
 ![wireframe](wireframes/homepag.png)
 ![wireframe](wireframes/sign-in-page.png)
 ![wireframe](wireframes/sign-up-page.png)
+![wireframe](wireframes/listOfBooks.png)
+![wireframe](wireframes/wishlist_page.png)
 
 ## ERDs
+![wireframe](wireframes/ERDs.png)
 
