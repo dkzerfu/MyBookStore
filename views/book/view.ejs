@@ -1,0 +1,12 @@
+<h1>This is books view page</h1>
+<div class="container">
+    <div  class="grid">
+        <% for(var i = 0; i < result.items.length; i++){ %>
+            <div class="cell">
+                <img src="<%= result.items[i].volumeInfo.imageLinks.thumbnail  %> ">
+                <h3><%= result.items[i].volumeInfo.title %> </h3>
+                <h4><%= result.items[i].volumeInfo.author   %> </h4>
+            </div>
+       <% } %>
+    </div>
+</div>

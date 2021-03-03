@@ -63,9 +63,29 @@
 | Method | URL | Functionality | view |
 |--------|-----|---------------|------|
 | GET  | /books | list all books | show books/index.ejs
-| POST | /books | add a book to wishlist | redirect to /books/:id
+| POST | /books | add a book to wishlist | redirect to /user/wishlistBooks
 | GET  | /books/:id | show one book |  redirect to /wishlist
 | DELETE | /books/:id | delete one book | redirect to /books
+| POST | /user/book | add a book to wishlist | redirect to /user/wishlistBooks
+| DELETE | /user/:id/book/:id | delete one book|  redirect to /wishlist
+
+### User RESTful routing chart
+| Method | URL | Functionality | view |
+|--------|-----|---------------|------|
+| GET | /user/new | show sign up page | redirect to /user/new.ejs
+| POST  | /user | create new user |  redirect to '/'
+| GET | /user/login | show log in page | render to /user/login
+| POST | /user/login | login user | redirect to '/'
+| GET | /user/wishlistbook | show wish list page|  redirect to /user/wishlist
+
+### Rental RESTful routing chart
+| Method | URL | Functionality | view |
+|--------|-----|---------------|------|
+| GET | /user/rental | show rented books | redirect to /user/rental.ejs
+| POST | /user/rental | add new rental book | redirect to /user/rental.ejs
+| DELETE | /user/:id/book/:id | delete one book|  redirect to /rental.ejs
+
+
 
 ## Wireframes
 
