@@ -1,1 +1,14 @@
 <h1>wishListBook</h1>
+<div class="container">
+    <div class="grid">
+        <% book.forEach(book => { %>
+        <div class="cell">
+                <img src="<%= book.img_url  %> " alt="">
+                <h1><%=book.title  %>  </h1>
+                <form action="/user/:id/wishListBook">
+                    <input type="submit" value="remove">
+                </form>
+            </div>
+            <% }) %> 
+    </div>
+</div>

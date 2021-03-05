@@ -44,7 +44,8 @@
       * stub routes -- test routes
       * build routes
     - Wednesday:
-      * finish routes
+      * finish all routes
+      * finish api display
       * create views
     - Thursday:
       * finish views

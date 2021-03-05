@@ -5,13 +5,36 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/user/login">SIGN IN</a>
-        <a href="/user/signOut">SIGN OUT</a>
-        <a href="/user/new">SIGN UP</a>
-        <a href="/user/wishListBook">Wish List</a>
-    </nav>
+        <ul>
+            <li>
+                <a href="/"><img src="/Users/dagmzerfu/code/w6/project_2/MyBookStore/icons/home.webp" ></a>
+            </li>
+            <% if(user){ %>
+            <li>
+                    <a href="/user/profile" id="profile">profile</a>
+                </li>
+                <li>
+                    <a href="/user/signOut">SIGN OUT</a>
+                </li>
+                <li>
+                    <a href="/user/:id/wishListBook">Wish List</a>
+                </li>
+                
+                    <% } else { %>
+                        <li>
+                        <a href="/user/login">SIGN IN</a>
+                    </li>
+                    <li>
+                        <a href="/user/new">SIGN UP</a>
+                    </li>
+                        <%  }   %> 
+
+
+
+
+        </ul>
+
+    
     <div >
         <%- body  %> 
     </div>
