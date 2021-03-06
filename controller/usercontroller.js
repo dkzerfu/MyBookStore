@@ -63,13 +63,8 @@ router.get('/signOut', async (req, res) => {
 
 router.get('/:id/wishListBook' , async (req, res) => {
     try{
-        const decryptedId = cryptoJs.AES.decrypt(req.cookies.userId, 'super secret string')
-        const decryptedIdString = decryptedId.toString(cryptoJs.enc.Utf8)
-        
-        const user = await models.user.findByPk(decryptedIdString)
-        
         const book = await models.book.findAll({
-            where:{ userId: user.id }
+            where:{ userId: res.locals.user.id }
         })
 
         res.render('user/wishListBook.ejs', {book})
@@ -77,6 +72,7 @@ router.get('/:id/wishListBook' , async (req, res) => {
         console.log(err)
     }
 })
+
 
 
 

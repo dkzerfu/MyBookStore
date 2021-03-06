@@ -2,13 +2,17 @@
 <div class="container">
     <div class="grid">
         <% book.forEach(book => { %>
-        <div class="cell">
-                <img src="<%= book.img_url  %> " alt="">
-                <h1><%=book.title  %>  </h1>
-                <form action="/user/:id/wishListBook">
-                    <input type="submit" value="remove">
-                </form>
+            <div class="cell">
+                <div>
+                    <img src="<%= book.img_url  %> " alt="">
+                    <h1><%=book.title  %>  </h1>
+                </div>
+                <div>
+                    <form action="/book/<%=book.id%>?_method=DELETE" method="POST">
+                    <input class="button" type="submit" value="remove">
+                    </form>
+                </div>
             </div>
-            <% }) %> 
+        <% }) %> 
     </div>
 </div>

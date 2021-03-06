@@ -6,7 +6,7 @@ const cryptoJs = require('crypto-js')
 const rowdy = require('rowdy-logger')
 require('dotenv').config()
 const models = require('./models')
-
+const methodOveride = require('method-override')
 
 const PORT = 3000
 const rowdyResult = rowdy.begin(app)
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
 app.use(cookieParser())
-
+app.use(methodOveride('_method'))
 
 app.use(async (req, res, next) => {
     if(req.cookies.userId){
@@ -26,7 +26,7 @@ app.use(async (req, res, next) => {
         
         const user = await models.user.findByPk(decryptedIdString)
         
-      res.locals.user = user
+    res.locals.user = user
     }else{
         res.locals.user = null
     }

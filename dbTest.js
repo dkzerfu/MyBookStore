@@ -35,7 +35,7 @@ const axios = require('axios')
 let results = []
 
 async function bookStore(){
-    const url = `https://www.googleapis.com/books/v1/volumes?q=python&key=AIzaSyCTXxF8OBPJkMb0ufpLRPGaypMbkPja5lY`
+    const url = `https://www.googleapis.com/books/v1/volumes?q=python&key=${key}`
     const requestSearch = await axios.get(url)
     const result = requestSearch.data
 
@@ -43,7 +43,7 @@ async function bookStore(){
         let items = result.items[i]
         let title = items.volumeInfo.title
         let description = items.volumeInfo.description
-        let price = items.saleInfo.listPrice.amount
+        let price = items.volumeInfo.infoLink
         results.push('price')
         console.log(price)
         return(items)

@@ -14,11 +14,14 @@ module.exports = {
       author: {
         type: Sequelize.STRING
       },
+      img_url:{
+        type: Sequelize.TEXT
+      },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       price: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       userId: {
         type: Sequelize.INTEGER
