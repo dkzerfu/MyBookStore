@@ -28,6 +28,8 @@ header{
     padding: 30px 5%;
     border-bottom: black;
     box-shadow: seashell;
+    width: 100%;
+    
 }
 .logoDiv{
     margin-right: auto;
@@ -43,6 +45,7 @@ header{
     font-family: 'Akaya Telivigala', cursive;
     font-family: 'Montserrat', sans-serif;
     transition: all 0.3s ease 0s;
+    color: #0088a9;
 }
 
 .logo {
@@ -55,7 +58,7 @@ header{
     text-shadow: -6px -4px 1px rgba(206,89,55,0.55);
 }
 .logoName:hover{
-    color: #0088a9;
+    color: white;
 }
 .logo:hover{
     color: #0088a9;
@@ -93,10 +96,6 @@ header{
     background-color: rgba(0, 136, 169, 0.8);
 }
 
-
-.container{
-    margin: 0 auto;
-}
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -107,9 +106,7 @@ header{
 
 
 .cell{
-    display: flex;
-    flex-direction: column;
-    color: #fff;
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -117,9 +114,11 @@ header{
     text-align: center;
     border: solid rgb(32, 30, 30);
     border-radius: 10%;
-    height: fit-content;
-    
+    grid-area: auto;
+    position: relative;
+    box-shadow: 4px 2px 4px rgba(63, 151, 147, 0.55); 
 }
+
 
 .hidden{
     display: none;
@@ -191,8 +190,8 @@ header{
 .headerh2{
     margin-top: 0;
 }
-.logoName{
-    text-shadow: -6px -2px 4px rgba(63, 151, 147, 0.55);
+.logoName:hover{
+    text-shadow: 6px 2px 2px rgba(63, 151, 147, 0.55);
 }
 span{
     font-size: 20px;
@@ -234,4 +233,16 @@ span{
 }
 #link a:hover{
     color: rgb(135, 228, 189);
+}
+.about{
+    margin: 100px;
+}
+.h1{
+    margin-bottom: 30px;
+}
+.container{
+    margin-top: 2%;
+}
+.view{
+    margin-bottom: 5%;
 }

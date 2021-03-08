@@ -11,9 +11,13 @@
             <a class="shado" href="/" class="logo"><img src="/icons/icon-book.png" alt="" width="100px" height="100px"></a>
             <p class="headerh2">MyBookStore</p>
         </div>
+
         <nav class="nav_links">
             <ul>
                 <% if(user){ %>
+                    <li>
+                        <a href="/user/about">About</a>
+                    </li>
                     <li>
                         <a href="/user/signOut">Sign Out</a>
                     </li>
@@ -26,6 +30,9 @@
                         </div>
                     </li>
                     <% } else { %>
+                        <li>
+                            <a href="/user/about">About</a>
+                        </li>
                         <li>
                             <a href="/user/login">Sign In</a>
                         </li>

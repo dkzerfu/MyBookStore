@@ -7,6 +7,9 @@ const { mode } = require('crypto-js')
 router.get('/new' , async (req, res) =>{
     res.render('user/new')
 })
+router.get('/about' , async (req, res) =>{
+    res.render('user/about')
+})
 
 router.post('/', async (req, res) => {
     try{
