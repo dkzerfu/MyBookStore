@@ -8,7 +8,6 @@ require('dotenv').config()
 const models = require('./models')
 const methodOveride = require('method-override')
 
-const PORT = 3000
 const rowdyResult = rowdy.begin(app)
 
 app.use(ejsLayouts)
@@ -20,13 +19,13 @@ app.use(methodOveride('_method'))
 
 app.use(async (req, res, next) => {
     if(req.cookies.userId){
-
+        
         const decryptedId = cryptoJs.AES.decrypt(req.cookies.userId, 'super secret string')
         const decryptedIdString = decryptedId.toString(cryptoJs.enc.Utf8)
         
         const user = await models.user.findByPk(decryptedIdString)
         
-    res.locals.user = user
+        res.locals.user = user
     }else{
         res.locals.user = null
     }
@@ -37,6 +36,7 @@ app.use(async (req, res, next) => {
 
 
 
+const PORT = process.env.Port || 3000
 app.get('/', function(req, res){
     res.render('index')
 })
